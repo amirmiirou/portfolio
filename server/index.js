@@ -4,6 +4,7 @@ const fs=require("fs")
 const nodemailer=require("nodemailer")
 const formidable=require("formidable")
 
+
 let server= express();
 server.use((req,res,next)=>{
 res.header('Access-Control-Allow-Origin','*')
@@ -14,6 +15,8 @@ res.header('Access-Control-Allow-Headers','Content-Type')
 next();
 
 })
+
+
 
 server.use(express.json())  //this is to accept data in json format 
 server.use(express.urlencoded())   //this is to decode the data send throught html form
